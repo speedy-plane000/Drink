@@ -2,7 +2,7 @@ package everything;
 
 public class Drink {
     private String name;
-    private Action root;
+    private Element root;
 
     Drink(String name, Action root) {
         setName(name);
@@ -15,5 +15,5 @@ public class Drink {
 
     public void setRoot(Action root) { this.root = root; }
 
-    public Action getRoot() { return root; }
+    public Element getRoot() { return root; }
 }

@@ -21,21 +21,16 @@ public abstract class Action implements Element {
         return this;
     }
 
+    @Override
     public void print(int level) {
         for (int i = 0; i < level; i++) {
-            System.out.print("   ");
+            System.out.print("  ");
         }
+
         System.out.println(getName());
 
-        for (Element el : children) {
-            if (el instanceof Action) {
-                ((Action) el).print(level + 1);
-            } else {
-                for (int i = 0; i < level + 1; i++) {
-                    System.out.print("   ");
-                }
-                System.out.println(el.getName());
-            }
+        for (Element child : children) {
+            child.print(level + 1);
         }
     }
 }
